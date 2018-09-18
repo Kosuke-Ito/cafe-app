@@ -22,6 +22,9 @@
 
 /public/assets
 .byebug_history
+/db/cafe.csv
+.idea
+.DS_Store
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
