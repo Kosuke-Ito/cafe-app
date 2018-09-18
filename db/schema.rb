@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_141956) do
 
   create_table "cafes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "phon_num", null: false
+    t.string "phon_num"
     t.string "station", null: false
     t.string "address", null: false
     t.string "open"
