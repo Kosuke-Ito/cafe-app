@@ -1,9 +1,5 @@
 class Cafe < ApplicationRecord
   def self.search(search)
-    if search
-    Post.where(['content LIKE ?', "%#{search}%"])
-    else
-    Post.all
-    end
+      Cafe.where(['name LIKE ?', "%#{search}%"])
   end
 end

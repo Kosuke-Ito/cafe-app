@@ -1,12 +1,8 @@
 class CafesController < ApplicationController
   def index
-    @cafes = Cafe.all
+    @cafes = Cafe.search(params[:search])
   end
 
   def show
-  end
-
-  def search
-    @cafe = Cafe.search(params[:serch])
   end
 end

@@ -6,9 +6,14 @@
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="d-flex flex-wrap">
     <% @cafes.each do |cafe| %>
-      <p class="col-md-6 cafe-name"><%= cafe.name %></p>
+      <div class="col-md-6 content-box">
+          <%= image_tag("coffee.JPG") %>
+        <p class="cafe-name">
+          <%= cafe.name %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>
