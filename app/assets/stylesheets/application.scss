@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+header{
+  margin: 1rem;
+  border-bottom: solid 1px gray;
+}

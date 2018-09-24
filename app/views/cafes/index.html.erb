@@ -1,3 +1,7 @@
-<h1>Cafes</h1>
-<p>トップページです。</p>
-<p>ユーザー用ページです。</p>
+<div class="container">
+  <div class="row">
+    <% @cafes.each do |cafe| %>
+      <p class="col-md-6"><%= cafe.name %></p>
+    <% end %>
+  </div>
+</div>
