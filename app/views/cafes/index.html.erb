@@ -1,7 +1,14 @@
+<div class="container search-box">
+  <%= form_tag(cafes_path,:method => 'get') do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search', :name => nil %>
+  <% end %>
+</div>
+
 <div class="container">
   <div class="row">
     <% @cafes.each do |cafe| %>
-      <p class="col-md-6"><%= cafe.name %></p>
+      <p class="col-md-6 cafe-name"><%= cafe.name %></p>
     <% end %>
   </div>
 </div>

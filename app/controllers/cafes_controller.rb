@@ -5,4 +5,8 @@ class CafesController < ApplicationController
 
   def show
   end
+
+  def search
+    @cafe = Cafe.search(params[:serch])
+  end
 end
