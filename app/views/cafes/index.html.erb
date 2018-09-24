@@ -1,7 +1,7 @@
 <div class="container search-box">
   <%= form_tag(cafes_path,:method => 'get') do %>
     <%= text_field_tag :search %>
-    <%= submit_tag 'Search', :name => nil %>
+    <%= submit_tag 'Search',class: "btn-primary", :name => nil %>
   <% end %>
 </div>
 
@@ -9,11 +9,16 @@
   <div class="d-flex flex-wrap">
     <% @cafes.each do |cafe| %>
       <div class="col-md-6 content-box">
+        <%= link_to(root_path) do %>
           <%= image_tag("coffee.JPG") %>
-        <p class="cafe-name">
-          <%= cafe.name %>
-        </p>
+          <p class="cafe-name">
+            <%= cafe.name %>
+          </p>
+        <% end %>
       </div>
     <% end %>
   </div>
+</div>
+<div class="col-md-6 offset-md-5">
+  <%= paginate @cafes %>
 </div>
