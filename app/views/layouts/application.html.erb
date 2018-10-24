@@ -14,7 +14,9 @@
         <nav>
           <div class="container">
             <div class="row">
-              <h1 class="align-self-center">Cafes</h1>
+              <h1 class="align-self-center top-logo">
+                <%= link_to 'Cafes', '/cafes',  :style=>"color:black; text-decoration:none;" %>
+              </h1>
             </div>
           </div>
           <!-- <% if user_signed_in? %>
@@ -28,9 +30,10 @@
         </nav>
     </header>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
+
+    <%= javascript_pack_tag 'hello_vue' %>
   </body>
 </html>
